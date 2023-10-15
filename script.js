@@ -37,7 +37,7 @@ function handleCellClick(e) {
   cell.classList.add('occupied');
 
   if (checkWin(currentPlayer)) {
-    endGame(currentPlayer + ' wins!');
+    endGame(currentPlayer + ' wins');
   } else if (isDraw()) {
     endGame("draw!");
   } else {
