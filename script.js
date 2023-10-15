@@ -3,6 +3,8 @@ const status = document.querySelector('[data-status]');
 const restartButton = document.querySelector('[data-restart]');
 const probabilityX = document.querySelector('[data-probability-x]');
 const probabilityO = document.querySelector('[data-probability-o]');
+const playerLeft = document.querySelector('.player-left');
+const playerRight = document.querySelector('.player-right');
 
 let currentPlayer = 'X';
 let gameOver = false;
@@ -41,6 +43,7 @@ function handleCellClick(e) {
   } else if (isDraw()) {
     endGame("draw!");
   } else {
+    switchColor();
     updateProbabilities();
     currentPlayer = selectNextPlayer();
   }
@@ -69,11 +72,26 @@ function selectNextPlayer() {
   }
 }
 
+function switchColor() {
+
+  if (playerLeft.style.color == 'rgb(255, 255, 255)'){
+    playerLeft.style.color = 'rgb(126, 126, 126)';
+    playerRight.style.color = 'rgb(255, 255, 255)';
+  }
+  else {
+        playerLeft.style.color = 'rgb(255, 255, 255)';
+        playerRight.style.color = 'rgb(126, 126, 126)';
+  }
+
+}
+
 function endGame(message) {
   status.textContent = message;
   gameOver = true;
   probabilityX.textContent = '';
   probabilityO.textContent = '';
+  playerLeft.style.color = 'rgb(126, 126, 126)';
+  playerRight.style.color = 'rgb(126, 126, 126)';
 }
 
 function restartGame() {
@@ -88,6 +106,9 @@ function restartGame() {
   probabilityPlayerO = 50;
   probabilityX.textContent = `X: ${probabilityPlayerX}%`;
   probabilityO.textContent = `O: ${probabilityPlayerO}%`;
+
+  playerLeft.style.color = 'rgb(255, 255, 255)';
+  playerRight.style.color = 'rgb(126, 126, 126)';
 }
 
 function checkWin(player) {

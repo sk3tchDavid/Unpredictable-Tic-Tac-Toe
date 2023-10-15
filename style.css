@@ -39,6 +39,20 @@ h1 {
     font-size: 24px;
 }
 
+.player-left {
+    float: left;
+    color: rgb(255, 255, 255);
+    margin-right: 25px;
+    font-size: large;
+  }
+  
+  .player-right {
+    float: right;
+    color: rgb(126, 126, 126);
+    margin-left: 25px;
+    font-size: large;
+  }
+
 .restart {
     background-color: #007bff;
     color: #fff;
