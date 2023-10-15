@@ -13,4 +13,4 @@ Unpredictable-Tic-Tac-Toe is a twist on the classic two-player Tic-Tac-Toe. In t
 
 ## Demo
 
-You can experience the game by following this link: [Unpredictable Tic Tac Toe Demo.](https://unpredictable-tic-tac-toe.netlify.app/)
+You can experience the game by following this link: [Unpredictable Tic Tac Toe Demo.](https://unpredictable-tic-tac-toe.netlify.app/){:target="_blank"}
