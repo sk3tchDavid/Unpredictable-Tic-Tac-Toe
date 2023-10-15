@@ -5,6 +5,7 @@ const probabilityX = document.querySelector('[data-probability-x]');
 const probabilityO = document.querySelector('[data-probability-o]');
 const playerLeft = document.querySelector('.player-left');
 const playerRight = document.querySelector('.player-right');
+const settingsButton = document.getElementById('settings-button');
 
 let currentPlayer = 'X';
 let gameOver = false;
